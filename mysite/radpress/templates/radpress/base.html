@@ -1,0 +1,151 @@
+{% load blocktrans trans from i18n %}
+{% load url from future %}
+{% load static %}
+
+{% load radpress_static_url from radpress_tags %}
+{% load radpress_widget_latest_posts from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/main.css' %}" media="all" type="text/css" rel="stylesheet" />
+  <link href="{% radpress_static_url 'css/footer.css' %}" media="all" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png">
+  <link href="{% static 'radpress/css/index.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block header-title %}
+<div id="header">
+  <div class="container">
+    <div class="top-header">
+      <img src="{{ MEDIA_URL }}radpress/entry_images/abacus-trans.png">
+      
+      <div id="sidebar">
+        {% include "radpress/partials/search_form.html" %}
+      </div>
+
+    </div>
+
+    <div class="headerlist">
+      <ul>
+        <li>
+          <a href="{% url 'radpress_home' %}">{% trans "Home" %}</a>
+          <div class="short">
+            <ul class="subheader">
+              <li>
+                <a href="{% url 'radpress-home' %}">{% trans "link one" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-home' %}">{% trans "link two" %}</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <a href="{% url 'radpress-features' %}">{% trans "Features" %}</a>
+        </li>
+        <li>
+          <a href="{% url 'radpress-solutions' %}">{% trans "Solutions" %}</a>
+          <ul class="subheader">
+            <li>
+              <a href="{% url 'radpress-home' %}">{% trans "link one" %}</a>
+            </li>
+            <li>
+              <a href="{% url 'radpress-home' %}">{% trans "link two" %}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="{% url 'radpress-clients' %}">{% trans "Industries" %}</a>
+        </li>
+        <li>
+          <a href="{% url 'radpress-about-us' %}">{% trans "About us" %}</a>
+        </li>
+        <li>
+          <a href="{% url 'radpress-contact' %}">{% trans "Contact" %}</a>
+        </li>
+              
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="breakline">
+</div>
+{% endblock %}
+
+
+{% block main %}
+
+
+    
+  <div id="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          {% block base_content %}
+            <div id="content">
+              {% block content %}{% endblock %}
+            </div>
+          {% endblock %}
+
+          {% block extra_content %}{% endblock %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
+<footer class="footer" role="contentinfo">
+
+  <nav class="footer-menu">
+    <ul class="menu">
+      <li ><h2>address</h2>
+        <div class="footer-address">
+          <p>Visual Management Systems</p>
+          <p>15 Cambuslang Road</p>
+          <p>Cambuslang Investment Park</p>
+          <p>Glasgow, G32 8NB</p>
+          <br>
+          <p>Telephone: +44 141 643 3070</p>
+        </div>
+      </li>
+      <li><h2>pages</h2>
+        <ul class="sub-menu">
+          <li><a href="http://www.prodcotech.com/about/company/">Home</a></li>
+          <li><a href="http://www.prodcotech.com/about/customers/">Features</a></li>
+          <li><a href="http://www.prodcotech.com/about/events/">Industries</a></li>
+          <li><a href="http://www.prodcotech.com/about/partners/">Clients</a></li>
+          <li><a href="http://www.prodcotech.com/about/careers/">About Us</a></li>
+          <li><a href="http://www.prodcotech.com/about/careers/">Contact</a></li>
+        </ul>
+      </li>
+      <li><h2>social links</h2>
+        <ul class="sub-menu">
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166">
+            <a class="social-link" href="https://www.youtube.com/user/VMSUK"><img src="/media/radpress/entry_images/youtube-icon.png"></img></a>
+            <a class="social-link" href="https://plus.google.com/105047091387183298226"><img src="/media/radpress/entry_images/google-plus-icon.png"></img></a>
+            <a class="social-link" href="https://twitter.com/@titanvision"><img src="/media/radpress/entry_images/tweet-icon.png"></img></a>
+            <a class="social-link" href="http://www.vmsuk.com/blog/rss/"><img src="/media/radpress/entry_images/rss-icon.png"></img></a>
+          </li>
+          <br>
+          <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504">
+            <img src="/media/radpress/entry_images/logo_white.png"></img>
+          </li>
+      </li>
+    </ul>
+  </nav>       
+
+  <div class="subfooter">
+    <div class="inner-subfooter">
+      <p class="copyright">&copy; Visual Management Systems Ltd 2015</p>
+      <nav class="legal-menu">
+        <ul id="menu-legal" class="menu">
+          <li><a href="http://www.prodcotech.com/privacy-policy/">Site Map</a></li>
+          <li><a href="http://www.prodcotech.com/privacy-policy/">Privacy Policy</a></li>
+          <li><a href="http://www.prodcotech.com/terms-of-use/">Terms of Use</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</footer>

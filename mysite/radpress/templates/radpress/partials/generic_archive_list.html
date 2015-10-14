@@ -1,0 +1,12 @@
+{% load trans from i18n %}
+{% load url from future %}
+
+{% for article in object.article_set.all %}
+  <div class="archive-item{% if forloop.last %} no-border{% endif %}">
+    <h2 class="article-title">
+      <a href="{{ article.get_absolute_url }}">{{ article }}</a>
+    </h2>
+  </div>
+{% empty %}
+  <p>{% trans "No entries found." %}</p>
+{% endfor %}

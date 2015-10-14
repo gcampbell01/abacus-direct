@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% load blocktrans trans from i18n %}
+{% load url from future %}
+{% load static %}
+
+{% load radpress_static_url from radpress_tags %}"
+{% load radpress_widget_latest_posts from radpress_tags %}
+
+{% block header-title %}
+<div class="wrapper">
+
+<ul class="headerlist">
+          <li>
+            <a href="{% url 'radpress-article-list' %}">{% trans "Main" %}</a>
+          </li>
+          <li>
+            <a href="{% url 'radpress-article-archive' %}">{% trans "List" %}</a>
+          </li>
+          
+</ul>
+</div>
+{% endblock %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/main.css' %}" media="all" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ MEDIA_URL }}images/favicon.png">
+  <link href="{% static 'radpress/css/index.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block class %}users{% endblock %}
+
+{% block main %}
+
+
+    
+  <div id="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          {% block base_content %}
+            <div id="content">
+              {% block content %}{% endblock %}
+            </div>
+          {% endblock %}
+
+          {% block extra_content %}{% endblock %}
+        </div>
+
+        <div class="col-lg-3">
+          <div id="sidebar">
+            {% include "radpress/partials/search_form.html" %}
+            {% radpress_widget_latest_posts %}
+
+            {% if tag_list %}
+              {% include "radpress/partials/tag_cloud.html" %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

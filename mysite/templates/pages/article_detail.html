@@ -1,0 +1,18 @@
+{% extends "pages/base.html" %}
+
+{% load trans from i18n %}
+{% load url from future %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block content %}
+  {% include "radpress/partials/entry.html" %}
+
+  {% if RADPRESS_DISQUS %}
+    <div id="comments" class="post box">
+      <div class="content-space">
+        {% include "radpress/partials/disqus.html" %}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

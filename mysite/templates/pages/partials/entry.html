@@ -1,0 +1,34 @@
+{% comment %}
+Arguments:
+- summary: Default, 0
+{% endcomment %}
+
+{% load blocktrans trans from i18n %}
+{% load radpress_full_name radpress_datetime from radpress_tags %}
+{% load url from future %}
+
+<div class="post">
+  {% if object.cover_image %}
+    <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" class="post-image">
+      <img src="{{ object.cover_image.image.url }}" alt="{{ object.cover_image.name }}" />
+    </a>
+  {% endif %}
+
+  <div class="title content-space">
+    
+    <h2><a href="{{ object.get_absolute_url }}" title="{{ object.title }}">{{ object.title }}</a></h2>
+  </div>
+
+  <div class="post-content content-space">
+    {% if summary %}
+      {{ object.content_by_more|safe }}
+      <p><a class="more-link" href="{{ object.get_absolute_url }}">{% trans "Read more" %} →</a></p>
+    {% else %}
+      {{ object.content_body|safe }}
+    {% endif %}
+  </div>
+
+  <div class="post-footer">
+
+  </div>
+</div>

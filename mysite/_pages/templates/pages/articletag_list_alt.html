@@ -1,0 +1,49 @@
+{% extends "pages/base.html" %}
+
+{% load trans from i18n %}
+{% load url from future %}
+
+{% block content %}
+
+  <div id="blog-archive">
+  {% for tag, object in object_list.items %}
+  <div class="post box clearfix">
+      <div class="frame frame-full">
+        
+        <div class="title content-space">
+          <h2 class="entry-title"><a href="{% url 'radpress-article-archive' %}?tag={{tag}}">{{ tag }}</a></h2>
+        </div>
+        
+        <div id="archive" class="content-space">
+          {% include "radpress/partials/tag_list.html" %}
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <p>{% trans "No posts found." %}</p>
+
+  {% endfor %}
+
+    
+
+    {% include "radpress/partials/navigation.html" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  <div class="sidebar-widget">
+    {% include "radpress/partials/search_form.html" %}
+  </div>
+
+  <div id="archive-tags">
+    <h2>{% trans "Tags" %}</h2>
+
+    {% if enabled_tag %}
+      <a href="{% url 'radpress-article-archive' %}" class="remove-tag">
+        {% trans "remove tag" %}
+      </a>
+    {% endif %}
+
+    {% include "radpress/partials/tag_cloud.html" %}
+  </div>
+{% endblock %}

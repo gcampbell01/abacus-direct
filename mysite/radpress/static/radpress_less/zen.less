@@ -1,0 +1,107 @@
+*:focus {
+    outline: none;
+}
+
+body.zen-mode {
+    margin: 0;
+    background: #110F13;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    padding: 5px 10px;
+    background-color: red;
+    color: #fff;
+    text-shadow: 0 0 1px #999;
+}
+
+#zen-header {
+    padding: 0 50px;
+    background-color: #1a1a1a;
+    font-size: .9em;
+    line-height: 25px;
+    height: 35px;
+    max-height: 35px;
+
+    a {
+        text-decoration: none;
+        color: #999;
+
+        &:hover {
+            color: #ddd;
+        }
+
+        &:active {
+            color: #fff;
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 5px 0;
+        list-style-type: none;
+        font-weight: bold;
+
+        &.zen-menu.pull-right li {
+            margin: 0 0 0 20px;
+        }
+
+        li {
+            margin-right: 20px;
+            display: inline-block;
+        }
+    }
+}
+
+#zen-container {
+    color: #fff;
+}
+
+#zen-mode {
+    form {
+        margin: 0;
+    }
+
+    textarea {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-color: transparent;
+        color: #fff;
+        font-size: 1.1em;
+        line-height: 1.5em;
+        border: none;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        resize: none;
+        font-family: monospace;
+    }
+}
+
+#zen-preview {
+    overflow: auto;
+    color: #ECE5CE;
+    background: #1e1e1e;
+    box-shadow: 0 0 10px #0e0e0e;
+    font-size: .9em;
+    line-height: 1.4em;
+
+    h1.title {
+        margin: 0;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    img {
+        width: 100%;
+    }
+}

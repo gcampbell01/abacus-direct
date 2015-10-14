@@ -1,0 +1,107 @@
+#sidebar {
+    .widget {
+        padding-bottom: 25px;
+        border-bottom: double 4px @sidebar-border-color;
+
+        &.widget-no-border {
+            border: none;
+        }
+    }
+
+    h2 {
+        &.widget-title {
+            color: @link-color;
+            font-size: 18px;
+            font-weight: normal;
+        }
+    }
+
+    .recent-posts-widget {
+        margin-top: 30px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+
+        h3, p {
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 15px;
+        }
+
+        p {
+            font-size: 12px;
+            color: @sidebar-datetime-color;
+        }
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid @sidebar-border-color;
+
+            &.no-border {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .search-form {
+        height: 50px;
+
+        .text {
+            font-size: 12px;
+            font-style: italic;
+            font-family: Georgia, serif;
+            border: none;
+            float: left;
+            width: 100%;
+            background: @white url('../img/search.png') no-repeat 10px 9px;
+            padding: 8px 7px 8px 30px;
+            border: solid 4px #e4e9eb;
+            color: #898e99;
+
+            .box-sizing(border-box);
+            .border-radius(20px);
+        }
+
+        .submit {
+            background: #666 url(../img/search.png) no-repeat center center;
+            width: 26px;
+            height: 28px;
+            font-size: 0;
+            line-height: 0;
+            text-indent: -9999px;
+            border: 0;
+            cursor: pointer;
+            float: right;
+            display: none;
+        }
+    }
+
+    .tagcloud {
+        padding: 25px 0;
+
+        a {
+            margin: 4px 5px;
+            padding: 3px 10px;
+            display: inline-block;
+            background: @pager-bg-color;
+            font-size: 13px;
+            color: @link-color;
+            .border-radius(15px);
+
+            &:hover {
+                text-decoration: none;
+                background: @white;
+            }
+        }
+
+        .label-info {
+            background-color: @white;
+        }
+    }
+}

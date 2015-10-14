@@ -1,0 +1,32 @@
+{% extends "radpress/base.html" %}
+
+{% load trans from i18n %}
+
+{% block content %}
+  <div id="blog-archive">
+    <div class="post box clearfix">
+      <div class="title content-space">
+        <h2 class="entry-title">{% trans "Search results" %}</h2>
+      </div>
+
+      <div id="archive" class="content-space">
+        {% for object in object_list %}
+        
+        <div class="archive-item{% if forloop.last %} no-border{% endif %}">
+            <h2 class="article-title">
+              <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+            </h2>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% include "radpress/partials/navigation.html" %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+  <div class="sidebar-box">
+    {% include "radpress/partials/search_form.html" %}
+  </div>
+{% endblock %}
