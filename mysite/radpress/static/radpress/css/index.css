@@ -37,10 +37,6 @@
     position: relative;
 }
 
-.short { 
-    width: 15%;
-}
-
 #header .headerlist ul {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 20px;
@@ -77,11 +73,8 @@
     background: #00D0FF;
     display: none;
     position: absolute;
+    width: 200px;
     padding-left: 0px;
-}
-
-.subheader {
-    width: 100%;
 }
 
 #header .headerlist ul li ul.subheader li a {
