@@ -1,0 +1,33 @@
+h1 {
+	font-size:40px;
+	color:#293484;	
+	text-align:center;
+}
+
+h2 {
+	font-size:20px;
+	color:#0066CC;
+	padding-left:60px;
+}
+p { padding-left:60px;
+	padding-right:60px;
+	padding-bottom:10px;
+}
+
+.container .left {
+    float: left;
+    width: 50%;
+    left-padding:50px;
+}
+
+.container .right {
+    float: right;
+    width: 50%;
+    left-padding:50px;
+}
+
+.right img {
+	width: 50%;
+	left-padding:50px;
+	margin-left:120px;
+}

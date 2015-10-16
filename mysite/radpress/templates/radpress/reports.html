@@ -1,0 +1,55 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/reports.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block main %}
+<div class="container">
+<h1>Reports </h1>
+
+<div class = "left">
+ <img src="{{ MEDIA_URL }}radpress/entry_images/noun_48296_cc (1).png">
+</div>
+
+<h2>What is a Report?</h2> 
+<p> The main purpose of the reports page is to create reports. A report is made up of: parameters outlined by the user, and the data fetched 
+	from the database that fills those parameters. Abacus allows you to fully customise extensive parameters to suit and fulfill your needs in any way, shape or form.  </p>
+
+<h2>Calendar</h2>
+<p> The main date picking feature of the interface. Clicking on the 'add a date' field on the sidebar will open up a calender. To use the 
+	calender, the user must click the dates they want their report to show, and then click done. Simple.
+ 	The user must now pick what kind of range the data is going to be presented in. Clicking day will give you an interval of hours, month - 
+	an interval of days, and year - an interval of months.
+</p>
+
+<p> This means that if you picked a date (say August 17th 2012 for example), and then clicked the day button, the presented data will show a 
+	count for each hour of that specific day.
+</p>
+
+<h2>Area/Cameras</h2>
+<p> A feature of abacus is to outline specific areas for counting. If a user only wanted to retrieve data from particular region, then they
+	outline it in this field.
+	Clicking the zone field offers the user the choice of which zone they would like to retrieve data from (for example, the North entrance). 
+	Abacus will then filter data depending on the zone the user wishes to see.
+</p>
+
+<h2>Chart Types</h2> 
+<p> There are several different chart types to choose from. Each chart type will pull the counts from the database and display it in whatever
+ 	way you would like.
+</p>
+	
+<p> This gives Abacus an edge over other basic counting systems where you have only 1 real option, however with Abacus you 
+	are able to select from an array of different formats to depict the information, certain charts will suit certain people and here at VMS 
+	we take into deep consideration every possible need of our client(s). Below you can see an example of some of the charts available:
+</p>
+
+<div class = "image">
+ <img src="{{ MEDIA_URL }}radpress/entry_images/Graphs.png">
+</div>
+
+</div>
+{% endblock %}

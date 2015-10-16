@@ -26,36 +26,66 @@
     </div>
 
     <div class="headerlist">
-      <ul>
+      <ul class="headerlist">
         <li>
           <a href="{% url 'radpress_home' %}">{% trans "Home" %}</a>
+        </li>
+        <li>
+          <a href="{% url 'radpress-features' %}">{% trans "Features" %}</a>
           <div class="short">
             <ul class="subheader">
               <li>
-                <a href="{% url 'radpress-home' %}">{% trans "link one" %}</a>
+                <a href="{% url 'radpress-users' %}">{% trans "User Management" %}</a>
               </li>
               <li>
-                <a href="{% url 'radpress-home' %}">{% trans "link two" %}</a>
+                <a href="{% url 'radpress-live' %}">{% trans "Live Monitoring" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-reports' %}">{% trans "Reports" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-auto' %}">{% trans "Automation" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-alerts' %}">{% trans "Live Alerts" %}</a>
               </li>
             </ul>
           </div>
         </li>
         <li>
-          <a href="{% url 'radpress-features' %}">{% trans "Features" %}</a>
-        </li>
-        <li>
           <a href="{% url 'radpress-solutions' %}">{% trans "Solutions" %}</a>
-          <ul class="subheader">
-            <li>
-              <a href="{% url 'radpress-home' %}">{% trans "link one" %}</a>
-            </li>
-            <li>
-              <a href="{% url 'radpress-home' %}">{% trans "link two" %}</a>
-            </li>
-          </ul>
+          <div class="short">
+            <ul class="subheader">
+              <li>
+                <a href="{% url 'radpress-local' %}">{% trans "Local" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-wan' %}">{% trans "Wide Area Network" %}</a>
+              </li>
+                <li>
+                  <a href="{% url 'radpress-cloud' %}">{% trans "Cloud Hosting" %}</a>
+                </li>
+            </ul>
+          </div>
         </li>
         <li>
-          <a href="{% url 'radpress-clients' %}">{% trans "Industries" %}</a>
+          <a href="{% url 'radpress-industries' %}">{% trans "Industries" %}</a>
+          <div class="short">
+            <ul class="subheader">
+              <li>
+                <a href="{% url 'radpress-retail' %}">{% trans "Retail and Shopping Centres" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-museum' %}">{% trans "Museums and Art Galleries" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-carpark' %}">{% trans "Car Parks" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-airport' %}">{% trans "Airports" %}</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li>
           <a href="{% url 'radpress-about-us' %}">{% trans "About us" %}</a>
@@ -111,12 +141,12 @@
       </li>
       <li><h2>pages</h2>
         <ul class="sub-menu">
-          <li><a href="http://www.prodcotech.com/about/company/">Home</a></li>
-          <li><a href="http://www.prodcotech.com/about/customers/">Features</a></li>
-          <li><a href="http://www.prodcotech.com/about/events/">Industries</a></li>
-          <li><a href="http://www.prodcotech.com/about/partners/">Clients</a></li>
-          <li><a href="http://www.prodcotech.com/about/careers/">About Us</a></li>
-          <li><a href="http://www.prodcotech.com/about/careers/">Contact</a></li>
+          <li><a href="{% url 'radpress-features' %}">{% trans "Home" %}</a></li>
+          <li><a href="{% url 'radpress-features' %}">{% trans "Features" %}</a></li>
+          <li><a href="{% url 'radpress-solutions' %}">{% trans "Solutions" %}</a></li>
+          <li><a href="{% url 'radpress-industries' %}">{% trans "Industries" %}</a></li>
+          <li><a href="{% url 'radpress-about-us' %}">{% trans "About Us" %}</a></li>
+          <li><a href="{% url 'radpress-contact' %}">{% trans "Contact" %}</a></li>
         </ul>
       </li>
       <li><h2>social links</h2>
@@ -140,9 +170,9 @@
       <p class="copyright">&copy; Visual Management Systems Ltd 2015</p>
       <nav class="legal-menu">
         <ul id="menu-legal" class="menu">
-          <li><a href="http://www.prodcotech.com/privacy-policy/">Site Map</a></li>
-          <li><a href="http://www.prodcotech.com/privacy-policy/">Privacy Policy</a></li>
-          <li><a href="http://www.prodcotech.com/terms-of-use/">Terms of Use</a></li>
+          <li><a href="http://www.google.com/">Site Map</a></li>
+          <li><a href="{% url 'radpress-privacy' %}">Privacy Policy</a></li>
+          <li><a href="http://www.google.com/">Terms of Use</a></li>
         </ul>
       </nav>
     </div>

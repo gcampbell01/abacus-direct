@@ -1,0 +1,69 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/live.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="main">
+        <h1>Live Monitoring</h1>
+        <p>Abacus has incredibly fast start up speeds and one of the fastest 
+            analytics engines on the market. With its intelligence, Abacus delivers 
+            a self-aware system which can, for example, reboot itself and repair 
+            software problems in cameras and other intelligent devices.
+        </p>
+    </div>
+    <div class="row">
+        <div class="left">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/camera.svg">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><p>View live camera feeds from the dashboard and see events 
+                    as they happen. View individual cameras, or select specific 
+                    models to receive bespoke data.</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/support.png">
+        </div>
+        <div class="right">
+            <ul>
+                <li><p>Live monitoring of data presents the user with counting data in real time. 
+                They can view events as they happen, to make appropriate managerial decisions
+                quickly and efficiently.</p></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/dash.svg">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><p>Abacus offers the user the ability to program their own dashboard parameters.
+                    This means they can see calculated figures in real time. A user can find out 
+                    the total number of free spaces in a car park, or a percentage of the 
+                    capacity filled for example.</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %} 

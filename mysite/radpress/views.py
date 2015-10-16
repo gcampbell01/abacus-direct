@@ -319,6 +319,57 @@ class TagListView(ListView):
 
 def index(request, pk=None):
     d = {}
-
     return render_to_response('radpress/index.html',
                               d,  context_instance=RequestContext(request, processors=[context]))
+
+# Features pages
+
+def features(request, pk=None):
+    d = {}
+    return render_to_response('radpress/features.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def users(request, pk=None):
+    d = {}
+    return render_to_response('radpress/users.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def live(request, pk=None):
+    d = {}
+    return render_to_response('radpress/live.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def reports(request, pk=None):
+    d = {}
+    return render_to_response('radpress/reports.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def auto(request, pk=None):
+    d = {}
+    return render_to_response('radpress/auto.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def alerts(request, pk=None):
+    d = {}
+    return render_to_response('radpress/alerts.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+# Industries
+
+def retail(request, pk=None):
+    d = {}
+    return render_to_response('radpress/retail.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
+def museums(request, pk=None):
+    d = {}
+    return render_to_response('radpress/museums.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
+
+# Footer links
+
+def privacy(request, pk=None):
+    d = {}
+    return render_to_response('radpress/privacy.html',
+                               d, context_instance=RequestContext(request, processors=[context]))

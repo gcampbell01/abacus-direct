@@ -37,7 +37,85 @@
     position: relative;
 }
 
-#header .headerlist ul {
+/* --- ALTERNATIVE HEADERLIST ---
+
+ul.headerlist {
+    display: inline;
+    list-style: none;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 20px;
+    line-height: 1.428571429;
+    color: #000000;
+    margin: 0px;
+    float: right;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+ul.headerlist li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+ul.headerlist li:hover {
+  background: #555;
+  color: #fff;
+}
+
+.short {
+    position: absolute;
+}
+
+ul.headerlist li ul.subheader {
+  position: static;
+  width: 100%;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
+}
+
+ul.headerlist li ul.subheader li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
+}
+
+ul.headerlist li ul.subheader li:hover { 
+    background: #666; 
+}
+
+ul.headerlist li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/*  --- TOP HEADER LIST --- */
+
+#header .headerlist ul.headerlist {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     font-size: 20px;
     line-height: 1.428571429;
@@ -63,6 +141,15 @@
     background-color: #8FE9FD;
 }
 
+.short {
+    position: absolute;
+    background: #00D0FF;
+}
+
+.short .subheader {
+    width: 100% !important;
+}
+
 #header .headerlist li a{
     color: #293484;
     display: block;
@@ -72,8 +159,7 @@
 #header .headerlist ul li ul.subheader {
     background: #00D0FF;
     display: none;
-    position: absolute;
-    width: 200px;
+    position: static;
     padding-left: 0px;
 }
 
@@ -93,9 +179,11 @@
 
 #header .headerlist li  ul.subheader li {
     border-radius: 2px;
-    width: 200px;
+    width: 100%;
     text-align: left;
 }
+
+/*  --- WRAPPER --- */
 
 #wrapper .title.content-space h2 a {
     text-shadow: 0 2px 1px white;

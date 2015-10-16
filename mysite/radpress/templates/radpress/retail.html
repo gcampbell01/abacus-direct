@@ -1,0 +1,44 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/retail.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+{% block main %}
+<div class="container">
+<h1>Retail</h1> 
+
+<div class = "right">
+ <img src="{{ MEDIA_URL }}radpress/entry_images/noun_41958_cc.png">
+</div>
+
+<p> 
+	Why is Abacus a neccessity for modern-day retail? Abacus can take in thousands of counts from cameras providing fast and fluid feedback 
+	which can be easily decrypted through multiple easy to use and easily
+	understandable charts and graphs. Abacus will allow managers to view the busiest days, locations,
+	most populated areas and ratios such as number of customers to number of customers having purchased an item.
+</p>
+
+<p> 
+	Abacus has an almost unlimited range of uses, it can be used in every situation. For example if wanting to set up
+	a vendor or stall, Abacus can accurately tell you which camera is picking up the most counts, which location is the
+	highest populated at any given time, on any given day 24/7. 
+</p>
+
+<p>
+ Weekly, monthly or annual reports can be automated so you are always kept up-to-date with what's going on. Not only is
+	Abacus a tool in safety and security but can also be indirectly cost effective, via Abacus you are able to easily 
+	view which days of the week are the busiest through the counts system, after learning this you could employ more people
+	on certain days and less on other days, depending on the number of customers you're receiving.
+</p> 
+
+<p>	
+	Abacus will provide you with everything you need to know in modern-day retail, ensuring you are kept on top of everything
+	going on and are able to stay ahead of the game with an intricate yet easy to use counting system. Which will not only enhance
+	both security and safety but marketing and advertising techniques and strategies.
+</p> 
+
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/live.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="main">
+        <h1>Automation</h1>
+        <p>Once Abacus has been set up, it will carry out the clients needs
+            without human interaction. Abacus can generate reports 
+            automatically, and send them to the user exactly when they need 
+            them.
+        </p>
+    </div>
+    <div class="row">
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/dynamic.png">
+        </div>
+        <div class="right">
+            <ul>
+                <li><p>Create custom, dynamic reports that vary when new
+                 information becomes available.</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="left">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/delivery.png">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><p> Receive reports of the previous days, weeks or months
+                    figures exactly when you want them.</p></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="left">
+            <div>
+                <img src="{{ MEDIA_URL }}radpress/entry_images/group.png">
+            </div>
+        </div>
+        <div class="right">
+            <ul>
+                <li><p>Have reports sent to a user group, and share data with 
+                    with those interested to see it.</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 

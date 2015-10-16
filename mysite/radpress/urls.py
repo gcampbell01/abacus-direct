@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 from radpress.views import (
     ArticleArchiveView, ArticleDetailView, ArticleListView, PreviewView,
     PageDetailView, SearchView, ZenModeView, ZenModeUpdateView, TagListView,
-    GenericTagListView, index)
+    GenericTagListView, index, users, reports, alerts, museums, privacy)
 
 from radpress.feeds import ArticleFeed
 
@@ -63,9 +63,9 @@ urlpatterns = patterns(
         view=ArticleDetailView.as_view(),
         name='radpress-home'),
 
-    url(r'^detail/features/$',
-        view=ArticleDetailView.as_view(),
-        name='radpress-features'),
+    #url(r'^detail/features/$',
+    #    view=ArticleDetailView.as_view(),
+    #    name='radpress-features'),
 
     url(r'^detail/solutions/$',
         view=ArticleDetailView.as_view(),
@@ -73,7 +73,7 @@ urlpatterns = patterns(
 
     url(r'^detail/clients/$',
         view=ArticleDetailView.as_view(),
-        name='radpress-clients'),
+        name='radpress-industries'),
 
     url(r'^detail/about/$',
         view=ArticleDetailView.as_view(),
@@ -82,4 +82,65 @@ urlpatterns = patterns(
     url(r'^detail/contact/$',
         view=ArticleDetailView.as_view(),
         name='radpress-contact'),
+
+    # Features pages
+
+    url(r'features/$',
+        'features',
+        name='radpress-features'),
+
+    url(r'^features/users/$',
+        'users',
+        name='radpress-users'),
+    
+    url(r'^features/live/$',
+        'live',
+        name='radpress-live'),
+    
+    url(r'^features/reports/$',
+        'reports',
+        name='radpress-reports'),
+    
+    url(r'^features/auto/$',
+        'auto',
+        name='radpress-auto'),
+
+    url(r'^features/alerts/$',
+        'alerts',
+        name='radpress-alerts'),
+
+    # Industries
+    
+    url(r'^industries/retail/$',
+        'retail',
+        name='radpress-retail'),
+    
+    url(r'^detail/home/$',
+        view=ArticleDetailView.as_view(),
+        name='radpress-local'),
+    
+    url(r'^detail/home/$',
+        view=ArticleDetailView.as_view(),
+        name='radpress-wan'),
+    
+    url(r'^detail/home/$',
+        view=ArticleDetailView.as_view(),
+        name='radpress-cloud'),
+
+    
+    url(r'^industries/museums/$',
+        "museums",
+        name='radpress-museum'),
+    
+    url(r'^detail/home/$',
+        view=ArticleDetailView.as_view(),
+        name='radpress-carpark'),
+    
+    url(r'^detail/home/$',
+        view=ArticleDetailView.as_view(),
+        name='radpress-airport'),
+
+    url(r'^privacy-policy/$',
+        'privacy',
+        name='radpress-privacy'),
 )

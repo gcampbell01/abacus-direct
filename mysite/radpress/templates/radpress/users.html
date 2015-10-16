@@ -1,0 +1,43 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/users.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block main %}
+<div class="container">
+<h1>User Management</h1>
+
+<div class = "right">
+ <img src="{{ MEDIA_URL }}radpress/entry_images/management.png">
+</div>
+
+<h2>User Levels</h2>
+<p> A user level is a designation which allows the user to view and use certain areas of the system. For example: An "admin" user has full 
+	authority over every aspect of the site, whereas an "operator" user is only allowed to perform basic functions.</p>
+
+<p> The user levels were implemented with security in mind. It allows the super user to assign certain powers and authorities to various 
+	members of staff who use the system, with higher ranking staff members being given more authority. Abacus' main focus is your security 
+	and thus by having such a system in place, you are able to carefully give and take permissions and priviledges from your staff as you 	
+	wish and in doing so, enhancing your position and control as a manager which can lead to a safer, more intricate and maintained
+	enviroment.</p>
+	
+
+<h2>Creating a New User Level </h2>
+<p> By default, the system has an "admin" user levels. Only an admin user has the ability to create a enw user level to begin with. There are
+ 15 attributes that can be associated with a new user level, including a fully customisable naming system where you can assosciate user 
+ levels with names (e.g. Brian - Manager).</p>
+
+<p>Of the 15 attributes available, the admin can assign certain abilities to each. View, Add, Edit and Delete are all possible abilities that can be granted if the admin wishes to any other user on the system now or in the future. Abilities such as View are commonly associated with "Viewer" level users, whereas Edit and Delete which can alter and manipulate the information in the database is more suited to high level users such as "Admin" or "Manager".</p>
+
+<h2>Advantages </h2>
+<p> Abacus' User Level system is a deft and intricate yet easy to use system. Allowing managers and administrators total control over their 
+    company, Abacus is the ultimate people counting system with a superior organisational user level system allowing for complete control 
+    over one's company. </p>
+</div>
+{% endblock %}
+
+
