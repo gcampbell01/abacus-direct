@@ -1,0 +1,37 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/solutions.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="topper">
+        <img src="{{ MEDIA_URL }}radpress/entry_images/local_network.jpg">
+    </div>
+    <div class="main">
+        <h1>Local</h1>
+        <p>The most common type of Abacus system is the fully integrated, local 
+            installation. This is a complete, in house package that is built and
+             installed on the premises. 
+        </p>
+        <p>
+            All the data is collected and processed on site, and the system can 
+            be accessed and used internally. All devices connect to the system
+            through and internal network, that can be completely seperate from 
+            other networks already in place.
+        </p>
+        <p>
+            The system has the ability to be accessed externally as well. If the 
+            measures are available and in place, Abacus can be viewed off site
+            through a VPN or domain name host.
+        </p>
+    </div>
+</div>
+
+{% endblock %} 

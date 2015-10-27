@@ -1,0 +1,220 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+{% endblock %}
+
+
+
+{% block main %}
+<style>
+
+form {
+padding: 10px;
+width: 590px;
+margin: 0 auto;
+}
+
+.subject .row input{
+width: 580px;
+margin-left: 0;
+}
+
+.message {
+    float: left;
+    width: 480px;
+}
+.message .row textarea {
+     
+    width: 100%;
+    height: 50px;
+    max-width: 480px;
+} 
+
+.inline {
+padding-bottom: 10px;
+}
+
+h3 {
+    border-top: 1px dotted #CCCCCC;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 20px;
+}
+
+
+
+.row label {
+font-weight: normal;
+font-size: 14px;
+color: #999;
+}
+
+.row input, textarea{
+    width: 214px;
+    margin-left: 20px;
+    height: 35px;
+    line-height: 25px;
+    font-size: 14px;
+    font-family: 'PTSansRegular', 'PT Sans', arial;
+    border: solid 1px #d9d9d9;
+    border-radius: 2px;
+    box-shadow: inset 0px 4px 0px -2px #f0f0f0;
+    
+}
+
+textarea {
+    margin-left: 0;
+    
+}
+
+.row .name {
+margin-right: 20px;
+
+}
+.sender {
+    width: 100%;
+}
+
+
+.inline .row {
+float: left;
+
+}
+
+.recipients {
+    clear: both;
+}
+
+
+.buttons {
+    float: right; 
+}
+
+.errors {
+    
+}
+
+#submitButton {
+    font-size: 14px;
+    height: 60px;
+    line-height: 60px;
+    width: 80px;
+}
+
+p {
+    line-height: 24px;
+    width: 580px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-size:14px;
+}
+
+
+#id_sender_name, #id_recipient_name {
+    margin-right: 10px;
+}
+
+.errors {
+    line-height: 30px; 
+    clear: both;
+    color: blue;
+}
+
+.inline .row .errors ul {
+    margin-left: 70px;
+}
+
+.thanks {
+    background-color: #F7FFFA;
+    border: 1px solid #BEDDCA;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 10px auto 0;
+    padding: 20px;
+    text-align: center;
+    width: 540px;
+}
+
+</style>
+<p>Back to <a href='/'>Login</a><br/>
+{% if message %}
+    
+    {% if saved %}
+        <div class='thanks'>
+        Thanks, your message has been sent to the
+        system administrator, who will be in touch shortly.
+        </div>
+    {% else %}
+        {{ form.errors|length }} field{{ form.errors|pluralize }} needs to be corrected
+        before you can send your message.
+    {% endif %}
+    
+{% else %}
+You may contact the system administrators directly from the interface, detailing
+    a problem or a question. If you are logged in - you are not required to add
+    your name and contact details.</p>
+{% endif %}
+<form action="{% url 'contact_form' %}" method="post">
+    {% csrf_token %}
+    <div class="sender inline">
+        <h3>Your Details</h3>
+        <div class="row">
+            <div class='errors'>
+                {{ form.sender_name.errors }}
+            </div>
+        
+            <label class="title" for="sender_name">Name</label>
+            {{ form.sender_name }}
+            <!-- <input class="name" id='id_sender_name' placeholder="Your Name"/> -->
+        </div>
+        
+        
+        <div class="row">
+            
+                <div class='errors'>
+                    {{ form.sender_email.errors }}
+                </div>
+            
+            <label class="title" for="sender_email">Email</label>
+            {{ form.sender_email }}
+            <!-- <input class="email" id='id_sender_email' placeholder="Your Email"/> -->
+        </div>
+    </div>
+
+
+
+    <div class="subject">
+        <h3>Your Report</h3>
+        <div class="row">
+            
+                <div class='errors'>
+                    {{ form.subject.errors }}
+                </div>
+            
+            {{ form.subject }}
+            <!-- <input class="subject" id='id_subject' placeholder="Subject"/> -->
+        </div>
+    </div>
+
+    <div class='errors'>
+        {{ form.body.errors }}
+    </div>
+
+    <div class="message">
+        <div class="row"> 
+            {{ form.body }}
+            <!-- <textarea name="id_body" rows="8" cols="40"></textarea> -->
+        </div>
+    </div>
+
+    <div class="buttons">
+        <input type="submit" id="submitButton" value="Send" />  
+    </div>
+    <div class="clear"></div>
+</form>
+
+
+{% endblock %}

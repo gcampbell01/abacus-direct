@@ -1,0 +1,94 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+  <link href="{% radpress_static_url 'css/support.css' %}" media="all" type="text/css" rel="stylesheet" />
+{{ block.super }}
+{% endblock %}
+
+
+
+{% block main %}
+<div class="container">
+    <div class="heading">
+        <h1>Contact VMS</h1>
+        {% if message %}
+            
+            {% if saved %}
+                <div class='thanks'>
+                Thanks, your message has been sent to Visual Management Systems,
+                who will be in touch.
+                </div>
+            {% else %}
+                <div class="error">
+                    {{ form.errors|length }} field{{ form.errors|pluralize }} needs to be corrected
+                    before you can send your message.
+                </div>
+            {% endif %}
+            
+        {% else %}
+        <p>
+            Do you want more information about Abacus? Contact us using the form below and 
+            someone will be in touch shortly.
+        </p>
+        {% endif %}
+    </div>
+    <form action="{% url 'support_index' %}" method="post">
+        {% csrf_token %}
+        <div class="sender inline">
+            <h3>Your Details</h3>
+            <div class="row">
+                <div class='errors'>
+                    {{ form.sender_name.errors }}
+                </div>
+            
+                <label class="title" for="sender_name">Name</label>
+                {{ form.sender_name }}
+            </div>
+            
+            
+            <div class="row">
+                
+                    <div class='errors'>
+                        {{ form.sender_email.errors }}
+                    </div>
+                
+                <label class="title" for="sender_email">Email</label>
+                {{ form.sender_email }}
+            </div>
+        </div>
+
+
+
+        <div class="subject">
+            <h3>Your Message</h3>
+            <div class="row">
+                
+                    <div class='errors'>
+                        {{ form.subject.errors }}
+                    </div>
+                
+                {{ form.subject }}
+            </div>
+        </div>
+
+        <div class='errors'>
+            {{ form.body.errors }}
+        </div>
+
+        <div class="message">
+            <div class="row"> 
+                {{ form.body }}
+            </div>
+        </div>
+
+        <div class="buttons">
+            <input type="submit" id="submitButton" value="Send" />  
+        </div>
+        <div class="clear"></div>
+    </form>
+</div>
+
+
+{% endblock %}

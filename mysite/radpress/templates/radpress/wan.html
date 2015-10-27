@@ -1,0 +1,41 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/solutions.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="topper">
+        <img src="{{ MEDIA_URL }}radpress/entry_images/translator.png">
+    </div>
+    <div class="main">
+        <h1>Wide Area Network</h1>
+        <p>
+            Abacus was designed to be modular. The many pieces that make up the 
+            system can be moved around, put into separate systems, or even run 
+            on their own entirely. This functionality has allowed Abacus to link 
+            with other installations and harvest counts that it may not have 
+            been accessible to before.
+        </p>
+        <p>
+            As an example, there can be a main Abacus installation at a head 
+            office, with several, smaller systems off site that harvest 
+            information locally, before sending it on to the main Abacus server.
+            The main server installation can view data from each and every site 
+            that it receives counts from.
+        </p>
+        <p>
+            This solution was created with international businesses in mind. If 
+            you have several sites spanning a wide area, this solution will 
+            allow you to view the data from all your sites from one application.
+        </p>
+    </div>
+</div>
+
+{% endblock %} 

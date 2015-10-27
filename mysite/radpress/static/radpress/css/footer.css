@@ -167,7 +167,7 @@ padding-bottom: 40px;
     line-height: 28px
 }
 .footer-menu .menu>li {
-    width: 23%
+    width: 30%;
 }
 .footer-menu .menu>li>a {
     color: #6287E2;
@@ -257,4 +257,8 @@ padding-bottom: 40px;
     padding: 0 40px;
     text-transform: uppercase;
     white-space: nowrap;
+}
+
+.footer .footer-menu ul.menu li.left-list {
+    width: 40%
 }

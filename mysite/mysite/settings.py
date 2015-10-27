@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'radpress',
     'core',
     'easy_thumbnails',
+    'support',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -107,3 +108,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

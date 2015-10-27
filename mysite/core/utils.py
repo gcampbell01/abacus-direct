@@ -1,5 +1,4 @@
 import re
-from amii.setup.models import CronRegister
 from crontab import CronTab
 
 def error_content(type, value, tb):

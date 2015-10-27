@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q, Count
 from django.template import RequestContext
@@ -13,6 +13,7 @@ from radpress import settings as radpress_settings
 from radpress.models import Article, EntryImage, Page, Tag, ArticleTag
 from radpress.readers import get_reader
 from context import context
+from os import listdir
 
 
 class ArticleListView(BaseViewMixin, ListView):
@@ -126,6 +127,18 @@ class SearchView(BaseViewMixin, TemplateView):
             queryset += model.objects.filter(
                 Q(title__icontains=q) | Q(slug__icontains=q) |
                 Q(content__icontains=q), is_published=True)
+        """
+        found = []
+        pages = listdir('radpress/templates/radpress/')
+        import pdb;pdb.set_trace()
+        for page in pages:
+            filepath = 'radpress/templates/radpress/' + page
+            tmp = open(filepath)
+            content = tmp.read()
+            if q in content:
+                queryset.append(page)
+        """
+
 
         return queryset
 
@@ -354,7 +367,34 @@ def alerts(request, pk=None):
     return render_to_response('radpress/alerts.html',
                               d,  context_instance=RequestContext(request, processors=[context]))
 
+# Solutions
+
+def solutions(request, pk=None):
+    d = {}
+    return render_to_response('radpress/solutions.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def local(request, pk=None):
+    d = {}
+    return render_to_response('radpress/local.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def wan(request, pk=None):
+    d = {}
+    return render_to_response('radpress/wan.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def cloud(request, pk=None):
+    d = {}
+    return render_to_response('radpress/cloud.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
 # Industries
+
+def industries(request, pk=None):
+    d = {}
+    return render_to_response('radpress/industries.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
 
 def retail(request, pk=None):
     d = {}
@@ -366,6 +406,16 @@ def museums(request, pk=None):
     return render_to_response('radpress/museums.html',
                                d, context_instance=RequestContext(request, processors=[context]))
 
+def carpark(request, pk=None):
+    d = {}
+    return render_to_response('radpress/carpark.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
+def airports(request, pk=None):
+    d = {}
+    return render_to_response('radpress/airports.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
 
 # Footer links
 
@@ -373,3 +423,24 @@ def privacy(request, pk=None):
     d = {}
     return render_to_response('radpress/privacy.html',
                                d, context_instance=RequestContext(request, processors=[context]))
+
+def about(request, pk=None):
+    d = {}
+    return render_to_response('radpress/about.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
+def sitemap(request, pk=None):
+    d = {}
+    return render_to_response('radpress/sitemap.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
+def terms(request, pk=None):
+    d = {}
+    return render_to_response('radpress/terms.html',
+                               d, context_instance=RequestContext(request, processors=[context]))
+
+# Contact
+
+def contact(request):
+    return redirect('/support/')
+

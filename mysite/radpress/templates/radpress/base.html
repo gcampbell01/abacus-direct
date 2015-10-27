@@ -28,7 +28,7 @@
     <div class="headerlist">
       <ul class="headerlist">
         <li>
-          <a href="{% url 'radpress_home' %}">{% trans "Home" %}</a>
+          <a href="{% url 'radpress-home' %}">{% trans "Home" %}</a>
         </li>
         <li>
           <a href="{% url 'radpress-features' %}">{% trans "Features" %}</a>
@@ -129,7 +129,7 @@
 
   <nav class="footer-menu">
     <ul class="menu">
-      <li ><h2>address</h2>
+      <li class="left-list"><h2>address</h2>
         <div class="footer-address">
           <p>Visual Management Systems</p>
           <p>15 Cambuslang Road</p>
@@ -139,9 +139,9 @@
           <p>Telephone: +44 141 643 3070</p>
         </div>
       </li>
-      <li><h2>pages</h2>
+      <li class="centre-list"><h2>pages</h2>
         <ul class="sub-menu">
-          <li><a href="{% url 'radpress-features' %}">{% trans "Home" %}</a></li>
+          <li><a href="{% url 'radpress-home' %}">{% trans "Home" %}</a></li>
           <li><a href="{% url 'radpress-features' %}">{% trans "Features" %}</a></li>
           <li><a href="{% url 'radpress-solutions' %}">{% trans "Solutions" %}</a></li>
           <li><a href="{% url 'radpress-industries' %}">{% trans "Industries" %}</a></li>
@@ -149,7 +149,7 @@
           <li><a href="{% url 'radpress-contact' %}">{% trans "Contact" %}</a></li>
         </ul>
       </li>
-      <li><h2>social links</h2>
+      <li class="right-list"><h2>social links</h2>
         <ul class="sub-menu">
           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-166">
             <a class="social-link" href="https://www.youtube.com/user/VMSUK"><img src="/media/radpress/entry_images/youtube-icon.png"></img></a>
@@ -170,9 +170,9 @@
       <p class="copyright">&copy; Visual Management Systems Ltd 2015</p>
       <nav class="legal-menu">
         <ul id="menu-legal" class="menu">
-          <li><a href="http://www.google.com/">Site Map</a></li>
+          <li><a href="{% url 'radpress-sitemap' %}">Site Map</a></li>
           <li><a href="{% url 'radpress-privacy' %}">Privacy Policy</a></li>
-          <li><a href="http://www.google.com/">Terms of Use</a></li>
+          <li><a href="{% url 'radpress-terms' %}">Terms of Use</a></li>
         </ul>
       </nav>
     </div>

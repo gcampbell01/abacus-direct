@@ -1,0 +1,25 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/industries.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+<div class="container">
+    <div class="main">
+        <h1>
+            No matter your niche,<br />
+            we have a solution for you.</h1>
+    </div>
+    <p>
+        From retail shops and casinos to museums and big ticket retailers, 
+        Abacus has a people counting solution that matches your needs, with 
+        customized reporting based on your industry and customer types. Find 
+        out more about how we serve each industry:</p>
+</div>
+
+{% endblock %}

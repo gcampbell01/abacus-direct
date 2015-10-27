@@ -1,0 +1,53 @@
+h1 {
+	font-size:40px;
+	color:#293484;	
+	padding-left:60px;	
+	padding-bottom:10px;
+}
+
+h2 {
+	font-size:20px;
+	color:#0066CC;
+	padding-left:60px;
+	padding-bottom:5px;
+}
+
+h3 {	
+	font-size:17px;
+	padding-left:80px;
+	color:#0099FF;
+	padding-bottom:5px;
+}
+
+p { 
+	padding-left:60px;
+	padding-right:60px;
+	
+}
+
+div.space2 {
+	margin-left:60px;
+	margin-right:120px;	
+}
+
+div.container table tbody tr td{
+	font-family:Lucinda Sans Unicode;	
+	padding-left:60px;
+	margin-left:60px;
+	font-size:15px;
+	padding-bottom:20px;
+}
+
+div.space{
+	padding-left:20px;
+}
+
+div.container div.space2 ul li {
+	margin-bottom:10px;	
+	padding-left:40px;
+	background: url(http://www.vmsuk.com/images/tick.png) no-repeat left center;
+}
+
+div.container div.space table tbody tr td {
+	padding-right:60px;
+}

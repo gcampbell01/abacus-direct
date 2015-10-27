@@ -33,6 +33,7 @@
 
 #header .top-header img {
     width: 450px;
+    max-width: 50%;
     float: left;
     position: relative;
 }
@@ -144,6 +145,7 @@ ul.headerlist li:hover ul {
 .short {
     position: absolute;
     background: #00D0FF;
+    z-index: 1;
 }
 
 .short .subheader {
@@ -277,4 +279,10 @@ table {
     border-bottom: 0px;
     width: 50%;
     position: relative;
+}
+
+.testimony {
+  text-align: center;
+  border: solid 1px grey;
+  border-radius: 20px;
 }

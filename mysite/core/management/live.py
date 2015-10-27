@@ -1,5 +1,4 @@
 from django.core.management.base import BaseCommand, CommandError
-from amii.server.models import Connection
 from optparse import make_option
 import os.path
 import codecs

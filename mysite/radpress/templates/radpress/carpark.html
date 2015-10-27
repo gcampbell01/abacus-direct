@@ -1,0 +1,42 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/industries.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="topper">
+        <img src="{{ MEDIA_URL }}radpress/entry_images/carpark.png">
+    </div>
+    <div class="main">
+        <h1>Car Parks</h1>
+        <p>Car Parks may require counting applications for a number of different 
+            reasons. 
+        </p>
+        <p>You may want to calculate the average stay time of a car, 
+            or find out who is frequently staying too long. 
+        </p>
+        <p>You may want to know how full the car park is at any given time, so 
+            you can display the capacity on a variable message sign. This can 
+            help direct traffic to other car parks, or to less full areas.
+        </p>
+        <p>
+            Whatever the reason for collecting data on cars entering a car park,
+            Abacus can provide you with the data you need.
+        </p>
+        <p>
+            Abacus can integrate with a multitude of devices to help deliver 
+            accurate data. Smart devices such as ANPR cameras, Analytics cameras,
+            barriers, infrared trip wires and pressure sensors can all be used 
+            to generate metadata which Abacus can then use as meaningful counts.
+        </p>
+    </div>
+</div>
+
+{% endblock %} 

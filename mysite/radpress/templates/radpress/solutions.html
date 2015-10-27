@@ -1,0 +1,42 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/solutions.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+    <div class="main">
+        <h1>Solutions</h1>
+        <p>
+            With a range of hardware and software available through our network 
+            of partners all over the world, guaranteed high-quality 
+            manufacturing by our in-house team and cutting edge technology, 
+            we are ideally placed to deliver People Counting solutions to put 
+            you ahead of the competition.
+        </p>
+        <h2>All your data, in one place</h2>
+        <p>
+            Connect any data source. We have got over +100 readymade data 
+            connectors to large databases, cloud services, CRM, excel. We 
+            process and combine any structured, unstructured small or BIG data 
+            in to one automated datastore
+        </p>
+        <h2>Full-range Camera Support. IP, Analog, PTZ and Megapixel, we connect you better. </h2>
+        <p>
+            3VR supports cameras from most major manufacturers, easing the 
+            transition from analog to IP. Learn more about Camera Integration.
+        </p>
+        <ul>
+            <li><p>Many widely used cameras have been tested and verified in our labs for compatibility with our video management software.</p></li>
+            <li><p>Smart cameras: 3VR supports special camera features unique to various manufacturers such as camera stitching, virtual cameras, on-demand recording, and more. </p></li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %} 

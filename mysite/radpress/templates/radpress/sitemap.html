@@ -1,0 +1,57 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/sitemap.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+{% block main %}
+<h1>List of Pages</h1> 
+
+<div class = "sitemap2">
+<h2 title = "Go to the Home Page"><a href = "{% url 'radpress_home' %}">Home</a></h2>
+
+<h2 title = "Go to the Features Page"><a href = "{% url 'radpress-features' %}">Features</a></h2>
+</div>
+
+<div class = "sitemap">
+<ul style ="list-style-type:none"> 
+	<li><a href = "{% url 'radpress-users' %}">User Management </a></li>
+	<li><a href = "{% url 'radpress-live' %}">Live Monitoring </a></li>	
+	<li><a href = "{% url 'radpress-reports' %}">Reports </a></li>
+	<li><a href = "{% url 'radpress-auto' %}">Automated Reporting </a></li>
+	<li><a href = "{% url 'radpress-alerts' %}">Live Alerts </a></li>
+</ul>
+</div>
+
+<div class = "sitemap2">
+<h2 title = "Go to the Solutions Page"><a href = "{% url 'radpress-solutions' %}">Solutions</a></h2>
+</div>
+
+<div class = "sitemap">
+<ul style = "list-style-type:none">
+	<li><a href = "{% url 'radpress-local' %}">Local </a></li>	
+	<li><a href = "{% url 'radpress-wan' %}">Wide Area Network </a></li> 
+	<li><a href = "{% url 'radpress-cloud' %}">Cloud Hosting </a></li>
+</ul>
+</div>
+
+<div class = "sitemap2">
+<h2 title = "Go to the Industries Page"><a href = "{% url 'radpress-industries' %}">Industries</a></h2>
+</div>
+
+<div class = "sitemap">
+<ul style = "list-style-type:none">
+	<li><a href = "{% url 'radpress-retail' %}">Retail </a></li>
+	<li><a href = "{% url 'radpress-museum' %}">Museums </a></li>
+	<li><a href = "{% url 'radpress-carpark' %}">Car Parks </a></li>
+	<li><a href = "{% url 'radpress-airport' %}">Airports </a></li>
+</ul>
+</div>
+</div>
+</div>
+{% endblock %}
+
+
+

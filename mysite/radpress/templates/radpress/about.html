@@ -1,0 +1,50 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/about.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+{% block main %}
+<div class="container">
+<h1>About Visual Management Systems Limited</h1>
+
+<div class = "aboutus">
+<p>
+	Founded in 1996 and based in Glasgow, we provide solutions and services to customers in the UK and
+	overseas, both directly and through OEM partnerships with other technology companies. Our compelte,
+	bespoke PSIM solutions help our customers and partners to integrate and manage the world's largest 
+	and most complex security systems in airports, military bases, museums, city centres, national borders,
+	retail malls, oil and gas assets and critical national infrastructure. 
+</p>
+</div>
+
+<div class = "left">
+<img src="{{ MEDIA_URL }}radpress/entry_images/noun_210119_cc.png">
+</div>
+
+
+<p>
+	Our pristine business analytical system Abacus will deliver substantial business benefits
+	in a range of sectors year after year, with it's ease of installation, opertaion, usability
+	and future proofing. Abacus will deliver high quality reporting and analytical services time after
+	time, allowing for greater marketing skills, opportunities, strategies and techniques. 
+</p>
+
+<p>
+	Benefits include significant cost savings, future proofing, reliability and ease of use. Applications
+	available range from people counting to process control and infrastructure security. Abacus is the 
+	leading frontier in people counting systems, analysing large amounts of data through camera counts
+	then depicting said information in an array of different formats from graphs to charts to automated
+	reports or pie charts.
+</p>
+
+<div class = "center">
+<img src="{{ MEDIA_URL }}radpress/entry_images/Screenshot_8.png">
+</div>
+
+
+</div>
+{% endblock %}

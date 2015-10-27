@@ -4,42 +4,61 @@
 
 {% block head-css %}
 {{ block.super }}
-  <link href="{% radpress_static_url 'css/front.css' %}" media="all" type="text/css" rel="stylesheet" />
+  <link href="{% radpress_static_url 'css/features.css' %}" media="all" type="text/css" rel="stylesheet" />
 {% endblock %}
 
 
 {% block main %}
 
-<div id="main"  class="clearfix">
-    \/ something else that's not that \/
-</div>
-
 <div class="container">
     <div class="row">
-        <div class="left">
-            <h1>Measure</h1>
-            <p>Abacus provides a range of business benefits, including an unrivalled insight into the behaviour of your visitors or customers.</p>
-            <a href="{% url 'radpress-reports' %}">
-                <div class="link">
-                    See our reporting &rsaquo;&rsaquo;
-                </div>
-            </a>
-        </div>
-        <div class="right">
-            <img src="{{ MEDIA_URL }}radpress/entry_images/statistics.png">
+        <div class="top">
+            <p> 
+                With Abacus, you get what you need, when you need it, 
+                which allows you to take our insights and turn them into 
+                informed decisions that improve your business. 
+            </p>
         </div>
     </div>
-
     <div class="row">
         <div class="left">
-            <img src="{{ MEDIA_URL }}radpress/entry_images/manage.jpg">
-        </div>
-        <div class="right">
-            <h1>Manage</h1>
-            <p>Increase profitability and sell more efficiently by obtaining the operational understanding you need to optimize your resource allocation and staff rotas.</p>
+            <h1>User Management</h1>
+            <ul>
+                <li><p>Create new accounts for your staff, and assign them user 
+                    levels based on their authority.</p></li>
+                <li><p>Multiple user hierarchy and access security.</p></li>
+                <li><p>Assign tasks by user level, and delegate the work load 
+                    from the top down.</p></li>
+            </ul>
             <a href="{% url 'radpress-users' %}">
                 <div class="link">
-                    User management &rsaquo;&rsaquo;
+                    User assignment &rsaquo;&rsaquo;
+                </div>
+            </a>
+        </div>
+        <div class="right">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/people.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/desk.png">
+            </div>
+        </div>
+        <div class="right">
+            <h1>Live Monitoring</h1>
+            <ul>
+                <li><p>Keep up to date by watching live data as it happens.</p></li>
+                <li><p>View camera feeds to keep an eye on your premises.</p></li>
+                <li><p>Create custom dashboard parameters to view.</p></li>
+            </ul>
+            <a href="{% url 'radpress-live' %}">
+                <div class="link">
+                    Dashboard functions &rsaquo;&rsaquo;
                 </div>
             </a>
         </div>
@@ -47,21 +66,63 @@
 
     <div class="row">
         <div class="left">
-            <h1>Monitor</h1>
-            <p>Access to data and reports in real time to understand behaviour on the day.</p>
+            <h1>Reports</h1>
             <ul>
-                <li><p>A real time dashboard of live counting information</p></li>
-                <li><p>Create bespoke management reports that can be scheduled accordingly</p></li>
-                <li><p>Easily programmed to generate alerts by email or text</p></li>
+                <li><p>Create dynamic reports based on your unique 
+                     reporting requirements. </p></li>
+                <li><p>Choose from a plethora of chart types, to better show the 
+                    the data you want to see.</p></li>
+                <li><p>Filter your data by selecting custom parameters such as
+                    devices, areas, times and zones.</p></li>
             </ul>
             <a href="{% url 'radpress-reports' %}">
                 <div class="link">
-                    Live monitoring &rsaquo;&rsaquo;
+                    View reports functionality &rsaquo;&rsaquo;
                 </div>
             </a>
         </div>
         <div class="right">
-            <img src="{{ MEDIA_URL }}radpress/entry_images/monitor-statistics.png">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/3d-charts-graphs.jpg">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/automatic.png">
+            </div>
+        </div>
+        <div class="right">
+            <h1>Automation</h1>
+            <ul>
+                <li><p>Setup Abacus to do all the work for you.</p></li>
+                <li><p>Select custom tasks to for Abacus perform automatically
+                    on a daily, weekly or monthly basis.</p></li>
+            </ul>
+            <a href="{% url 'radpress-auto' %}">
+                <div class="link">
+                    Automatic features &rsaquo;&rsaquo;
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="left">
+            <h1>Live Alerts</h1>
+            <ul>
+                <li><p>Be notified of any major events as soon as the happen. </p></li>
+                <li><p>Choose what events you'd like to know about.</p></li>
+            <a href="{% url 'radpress-alerts' %}">
+                <div class="link">
+                    Available alerts &rsaquo;&rsaquo;
+                </div>
+            </a>
+        </div>
+        <div class="right">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/bell.png">
+            </div>
         </div>
     </div>
 </div>

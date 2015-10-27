@@ -1,0 +1,16 @@
+[
+    {
+        "pk": 1,
+        "model": "support.type",
+        "fields": {
+            "name": "sender"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "support.type",
+        "fields": {
+            "name": "recipient"
+        }
+    }
+]
