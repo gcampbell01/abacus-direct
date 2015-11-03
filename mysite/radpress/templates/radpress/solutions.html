@@ -9,33 +9,81 @@
 
 
 {% block main %}
+<div class="top">
+    <img src="{{ MEDIA_URL }}radpress/entry_images/rig.png">
+</div>
+<div class="breakline"></div>
 
 <div class="container">
     <div class="main">
-        <h1>Solutions</h1>
-        <p>
-            With a range of hardware and software available through our network 
-            of partners all over the world, guaranteed high-quality 
-            manufacturing by our in-house team and cutting edge technology, 
-            we are ideally placed to deliver People Counting solutions to put 
-            you ahead of the competition.
-        </p>
-        <h2>All your data, in one place</h2>
-        <p>
-            Connect any data source. We have got over +100 readymade data 
-            connectors to large databases, cloud services, CRM, excel. We 
-            process and combine any structured, unstructured small or BIG data 
-            in to one automated datastore
-        </p>
-        <h2>Full-range Camera Support. IP, Analog, PTZ and Megapixel, we connect you better. </h2>
-        <p>
-            3VR supports cameras from most major manufacturers, easing the 
-            transition from analog to IP. Learn more about Camera Integration.
-        </p>
-        <ul>
-            <li><p>Many widely used cameras have been tested and verified in our labs for compatibility with our video management software.</p></li>
-            <li><p>Smart cameras: 3VR supports special camera features unique to various manufacturers such as camera stitching, virtual cameras, on-demand recording, and more. </p></li>
-        </ul>
+        <div class="intro">
+            <h1>Solutions</h1>
+            <p>
+                With a range of hardware and software available through our network 
+                of partners all over the world, guaranteed high-quality 
+                manufacturing by our in-house team and cutting edge technology, 
+                we are ideally placed to deliver People Counting solutions to put 
+                you ahead of the competition.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/network.jpg">               
+            </div>
+            <div class="right">
+                <h2>Networking</h2>
+                <p>
+                    Wether your site is small, offline, or apart of a country wide
+                    area network, Abacus can integrate into your existing 
+                    networked installations. Our engineers can work with your 
+                    technical team to offer the best solution for your individual
+                    site.
+                </p>
+                <a href="{% url 'radpress-wan' %}">
+                    <div class="link">
+                        See how we integrate &rsaquo;&rsaquo;
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                <h2>Cloud Hosting</h2>
+                <p>
+                    Abacus exists as a web based application. Install Abacus in 
+                    the cloud and access your data from anywhere in the world.
+                </p>
+                <a href="{% url 'radpress-cloud' %}">
+                    <div class="link">
+                        Abacus in the cloud &rsaquo;&rsaquo;
+                    </div>
+                </a>
+            </div>
+            <div class="right">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/cloud_computing.jpg">               
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="left">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/cameras.jpg">               
+            </div>
+            <div class="right">
+                <h2>Smart Devices</h2>
+                <p>
+                    Use a wide range of smart devices to harvest
+                    the data that is important to you. Ensure you have reliable and 
+                    accurate figuers with Abacus and it's advanced counting algorithms.
+                </p>
+                <a href="{% url 'radpress-smart' %}">
+                    <div class="link">
+                        See what devices you can use &rsaquo;&rsaquo;
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -11,6 +11,24 @@
 
 {% block main %}
 <div class="container">
+    <div class="row">
+        <div class="left">
+            <p>Telephone: +44 141 643 3070</p>
+
+            <p>Email: <a href="mailto:info@vmsuk.com" title="email us">info@vmsuk.com</a></p>
+
+            <p>Headquarters:<br>
+                Visual Management Systems<br>
+                15 Cambuslang Road<br>
+                Cambuslang Investment Park<br>
+                Glasgow, G32 8NB</p>
+
+            <p>(set SATNAV for G32 8RG)</p>
+        </div>
+        <div class="right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143418.13895956858!2d-4.169164487280285!3d55.82954882336936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4888411b352477f3%3A0xa1ba0c24e8863586!2sg32+8nb!5e0!3m2!1sen!2suk!4v1389097357588" width="400" height="300" frameborder="0" style="border:0"></iframe>
+        </div>
+    </div>
     <div class="heading">
         <h1>Contact VMS</h1>
         {% if message %}
@@ -22,7 +40,7 @@
                 </div>
             {% else %}
                 <div class="error">
-                    {{ form.errors|length }} field{{ form.errors|pluralize }} needs to be corrected
+                    {{ form.errors|length }} field{{ form.errors|pluralize }} need{{ form.errors|pluralize:"s," }} to be corrected
                     before you can send your message.
                 </div>
             {% endif %}

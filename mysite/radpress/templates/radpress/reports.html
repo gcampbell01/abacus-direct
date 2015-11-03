@@ -8,48 +8,165 @@
 {% endblock %}
 
 {% block main %}
+<div class="top">
+	<img src="{{ MEDIA_URL }}radpress/entry_images/analytics.png">
+</div>
+<div class="breakline"></div>
+
+
 <div class="container">
-<h1>Reports </h1>
+	<div class="intro">
+		<h1>Reports </h1>
 
-<div class = "left">
- <img src="{{ MEDIA_URL }}radpress/entry_images/noun_48296_cc (1).png">
+		<p> 
+			The main purpose of the reporting feature is to display accurate,
+			historical counting data in a format that is easily read by the user.
+		</p>
+	</div>
+
+
+	<div class="row">
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/Linearsearch.png">               
+        </div>
+        <div class="right">
+			<h2>Search</h2>
+			<p>
+				Abacus uses advanced, searching algorithms to search for the data 
+				you need from the database. It delivers the data quickly and efficiently.
+			</p>
+        </div>
+    </div>
+
+
+	<div class="row">
+        <div class="left">
+			<h2>Customize</h2>
+			<p>
+				Use a variety of filters to deliver bespoke, custom data from a plethora
+				of sources. Use this to fetch data from different sites, and compare statistics
+				based on different parameters.
+			</p>
+        </div>
+        <div class="right">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/customize.jpg">               
+        </div>
+    </div>
+
+
+
+	<div class="row">
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/timerange.jpg">               
+        </div>
+        <div class="right">
+			<h2>Time Range</h2>
+			<p>
+				Abacus can further filter data based on the time you want to see data from.
+				Fetch data on hourly, daily, weekly, monthly or even yearly figures.
+			</p>
+			<p>
+				Dynamic time ranges can be created to further enhance the comparison of your data.
+				Compare statistics from the previous week or month, and create predictions
+				for the future.
+			</p>
+        </div>
+    </div>
+
+	<div class="row">
+        <div class="left">
+			<h2>Event Types</h2> 
+			<p>
+				Search by a variety of event rules, or types. Find figures such as in/out count,
+				loiter time, object size, speed, enter/exit count, object appearances/disappearances
+				etc.
+			</p>
+        </div>
+        <div class="right">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/vca.jpg">               
+        </div>
+    </div>
+
+		
+
+	<div class="row">
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/charts.png">               
+        </div>
+        <div class="right">
+			<h2>Chart Types</h2>
+			<p>
+				Display the data in a format you deem appropriate. Line and spline graphs
+				can be used to compare multiple statistical series. Area charts can be used to 
+				show trends over time. Bar graphs can be used to compare different groups
+				of data. Pie charts can be used to compare precentage data. And matrices 
+				are used to show raw data in a table format.
+			</p>
+        </div>
+    </div>
+
+
+	<div class="row">
+        <div class="left">
+			<h2>Programmable Views</h2>
+			<p>
+				Program your own filters to lay on top of the reports. Have your own set of custom reports
+				ready for your viewing every time you log in.
+			</p>
+        </div>
+        <div class="right">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/program.jpg">               
+        </div>
+    </div>
+
+		
+		
+
+	<div class="row">
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/export.png">               
+        </div>
+        <div class="right">
+			<h2>Export</h2>
+			<p>
+				Export the report data in a variety of formats. When a report is created,
+				you can send it to other users, email it, print it, create a PDF, or create a CSV
+				file for use within Excel.
+			</p>
+        </div>
+    </div>
+
+
+
+    <div id="page-wrap">
+
+		<section class="image-gallery group">
+
+			<figure tabindex="1">
+				<img src="{{ MEDIA_URL }}radpress/entry_images/camera.svg">
+				<figcaption>Jump!</figcaption>
+			</figure>
+
+			<figure tabindex="2">
+				<img src="{{ MEDIA_URL }}radpress/entry_images/camera.svg">
+				<figcaption>Woah there!</figcaption>
+			</figure>
+
+			<figure tabindex="3">
+				<img src="{{ MEDIA_URL }}radpress/entry_images/camera.svg">
+				<figcaption>Crossed Axes</figcaption>
+			</figure>
+
+			<figure tabindex="4">
+				<img src="{{ MEDIA_URL }}radpress/entry_images/camera.svg">
+				<figcaption>Brothers in Arms</figcaption>
+			</figure>
+
+		</section>
+
+	</div>
+    
 </div>
 
-<h2>What is a Report?</h2> 
-<p> The main purpose of the reports page is to create reports. A report is made up of: parameters outlined by the user, and the data fetched 
-	from the database that fills those parameters. Abacus allows you to fully customise extensive parameters to suit and fulfill your needs in any way, shape or form.  </p>
 
-<h2>Calendar</h2>
-<p> The main date picking feature of the interface. Clicking on the 'add a date' field on the sidebar will open up a calender. To use the 
-	calender, the user must click the dates they want their report to show, and then click done. Simple.
- 	The user must now pick what kind of range the data is going to be presented in. Clicking day will give you an interval of hours, month - 
-	an interval of days, and year - an interval of months.
-</p>
-
-<p> This means that if you picked a date (say August 17th 2012 for example), and then clicked the day button, the presented data will show a 
-	count for each hour of that specific day.
-</p>
-
-<h2>Area/Cameras</h2>
-<p> A feature of abacus is to outline specific areas for counting. If a user only wanted to retrieve data from particular region, then they
-	outline it in this field.
-	Clicking the zone field offers the user the choice of which zone they would like to retrieve data from (for example, the North entrance). 
-	Abacus will then filter data depending on the zone the user wishes to see.
-</p>
-
-<h2>Chart Types</h2> 
-<p> There are several different chart types to choose from. Each chart type will pull the counts from the database and display it in whatever
- 	way you would like.
-</p>
-	
-<p> This gives Abacus an edge over other basic counting systems where you have only 1 real option, however with Abacus you 
-	are able to select from an array of different formats to depict the information, certain charts will suit certain people and here at VMS 
-	we take into deep consideration every possible need of our client(s). Below you can see an example of some of the charts available:
-</p>
-
-<div class = "image">
- <img src="{{ MEDIA_URL }}radpress/entry_images/Graphs.png">
-</div>
-
-</div>
 {% endblock %}

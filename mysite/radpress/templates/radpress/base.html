@@ -35,7 +35,7 @@
           <div class="short">
             <ul class="subheader">
               <li>
-                <a href="{% url 'radpress-users' %}">{% trans "User Management" %}</a>
+                <a href="{% url 'radpress-alerts' %}">{% trans "Live Alerts" %}</a>
               </li>
               <li>
                 <a href="{% url 'radpress-live' %}">{% trans "Live Monitoring" %}</a>
@@ -47,7 +47,7 @@
                 <a href="{% url 'radpress-auto' %}">{% trans "Automation" %}</a>
               </li>
               <li>
-                <a href="{% url 'radpress-alerts' %}">{% trans "Live Alerts" %}</a>
+                <a href="{% url 'radpress-users' %}">{% trans "User Management" %}</a>
               </li>
             </ul>
           </div>
@@ -57,14 +57,14 @@
           <div class="short">
             <ul class="subheader">
               <li>
-                <a href="{% url 'radpress-local' %}">{% trans "Local" %}</a>
-              </li>
-              <li>
                 <a href="{% url 'radpress-wan' %}">{% trans "Wide Area Network" %}</a>
               </li>
-                <li>
-                  <a href="{% url 'radpress-cloud' %}">{% trans "Cloud Hosting" %}</a>
-                </li>
+              <li>
+                <a href="{% url 'radpress-cloud' %}">{% trans "Cloud Hosting" %}</a>
+              </li>
+              <li>
+                <a href="{% url 'radpress-smart' %}">{% trans "Smart Devices" %}</a>
+              </li>
             </ul>
           </div>
         </li>

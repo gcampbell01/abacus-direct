@@ -35,9 +35,11 @@ p {
     display: block;
     background-color: #00d4ff;
     color: white;
-    margin-left: 40px;
     font-size: 20px;
     padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .row {
@@ -65,4 +67,16 @@ p {
 .top {
   text-align: center;
   margin: 40px;
+}
+
+.topper img {
+    width: 100%;
+}
+
+.top h1 {
+    font-size: 50px;
+}
+
+.top p {
+    font-size: 30px;
 }

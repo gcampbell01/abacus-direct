@@ -374,11 +374,6 @@ def solutions(request, pk=None):
     return render_to_response('radpress/solutions.html',
                               d,  context_instance=RequestContext(request, processors=[context]))
 
-def local(request, pk=None):
-    d = {}
-    return render_to_response('radpress/local.html',
-                              d,  context_instance=RequestContext(request, processors=[context]))
-
 def wan(request, pk=None):
     d = {}
     return render_to_response('radpress/wan.html',
@@ -387,6 +382,11 @@ def wan(request, pk=None):
 def cloud(request, pk=None):
     d = {}
     return render_to_response('radpress/cloud.html',
+                              d,  context_instance=RequestContext(request, processors=[context]))
+
+def smart(request, pk=None):
+    d = {}
+    return render_to_response('radpress/smart.html',
                               d,  context_instance=RequestContext(request, processors=[context]))
 
 # Industries

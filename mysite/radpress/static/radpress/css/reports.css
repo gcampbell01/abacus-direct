@@ -1,44 +1,90 @@
 h1 {
-	font-size:40px;
-	color:#293484;	
-	text-align:center;
+    font-size:40px;
+    color:#293484;  
+    text-align:center;
 }
 
 h2 {
-	font-size:20px;
-	color:#0066CC;
-	padding-left:60px;
-	;
+    margin-top: 40px;
+    text-align: center;
 }
-p { padding-left:60px;
-	padding-right:60px;
-	padding-bottom:10px;
+p {
+    font-family: "Segoe UI Light","Segoe UI Web Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","HelveticaNeue-Light","Helvetica Neue",Arial,sans-serif;
+    font-size: 20px;
 }
+
 
 .container .left {
     float: left;
-    width:35%;
-    padding-left:60px;
-    
+    width: 50%;
 }
 
+.container .left img {
+    width: 90%;
+    margin: 5%
+}
 .container .right {
+    width: 50%;
     float: right;
-    width: 50%;  
 }
 
-.right img {
-	width: 100%;
+.container .right img {
+    width: 90%;
+    margin: 5%
 }
 
-.left img {
-	width:80%;
-	margin-left:5px;
-	margin:15px;
-	
+.top img {
+    width: 100%;
+}
+
+.intro p {
+    font-size: 30px;
 }
 
 .container .image {
-	padding-left:60px;
+    padding-left:60px;
 
+}
+
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+#page-wrap { width: 660px; margin: 60px auto; }
+
+.image-gallery { margin: 20px 0 25px 0; }
+
+figure { 
+    width: 120px; 
+    float: left; 
+    margin: 0 20px 0 0; 
+    background: white;
+    border: 10px solid white; 
+    -webkit-box-shadow: 0 3px 10px #ccc; 
+    -moz-box-shadow: 0 3px 10px #ccc;
+    -moz-transform: rotate(5deg);
+    -webkit-transition: all 0.7s ease; 
+    -moz-transition: all 1s ease;
+    position: relative;
+}
+
+figcaption { 
+    text-align: center; 
+    display: block; 
+    font-size: 12px; 
+    font-style: italic; 
+}
+
+figure img { 
+    width: 100%; /* Scale down */
+}
+
+figure:hover {
+    -webkit-transform: rotate(-1deg); -moz-transform: rotate(1deg);
+    -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
+}
+
+figure:focus {
+    outline: none;
+    -webkit-transform: rotate(-3deg) scale(4.5); -moz-transform: rotate(-3deg) scale(2.5);
+    -webkit-box-shadow: 0 3px 10px #666; -moz-box-shadow: 0 3px 10px #666;
+    z-index: 9999;
 }

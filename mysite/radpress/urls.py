@@ -3,7 +3,7 @@ from radpress.views import (
     ArticleArchiveView, ArticleDetailView, ArticleListView, PreviewView,
     PageDetailView, SearchView, ZenModeView, ZenModeUpdateView, TagListView,
     GenericTagListView, index, users, reports, alerts, museums, privacy,
-    solutions, local, wan, carpark, contact)
+    solutions, wan, carpark, contact)
 
 from radpress.feeds import ArticleFeed
 
@@ -108,10 +108,6 @@ urlpatterns = patterns(
         'solutions',
         name='radpress-solutions'),
 
-    url(r'^solutions/local$',
-        'local',
-        name='radpress-local'),
-
     url(r'^solutions/wan$',
         'wan',
         name='radpress-wan'),
@@ -119,6 +115,10 @@ urlpatterns = patterns(
     url(r'^solutions/cloud$',
         'cloud',
         name='radpress-cloud'),
+
+    url(r'^solutions/smart-devices$',
+        'smart',
+        name='radpress-smart'),
 
     # Industries
 

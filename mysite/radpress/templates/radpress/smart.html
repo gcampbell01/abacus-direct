@@ -1,0 +1,65 @@
+{% extends "radpress/base.html" %}
+
+{% load radpress_static_url from radpress_tags %}
+
+{% block head-css %}
+{{ block.super }}
+  <link href="{% radpress_static_url 'css/solutions.css' %}" media="all" type="text/css" rel="stylesheet" />
+{% endblock %}
+
+
+{% block main %}
+<div class="top">
+    <img src="{{ MEDIA_URL }}radpress/entry_images/android.jpg">
+</div>
+<div class="breakline"></div>
+
+<div class="container">
+    <h1> Smart Devices </h1>
+    <p> Abacus can interface with a plethora of counting devices to give you the
+        data you need. Whether it's an analytics camera, a barrier, a tripwire or 
+        a scanner, Abacus can collect the data you need from it.
+    </p>
+    <div class="row">
+        <h2> Analytics Cameras </h2>
+        <div class="left">
+            <img src="{{ MEDIA_URL }}radpress/entry_images/analytics-BrowserRedBox.jpg">
+        </div>
+        <div class="right">
+            <p> With a backbone built on sharper HD video, Avigilon offers a 
+                smarter analytics solution that is unparalleled in the industry. 
+                Through the use of high definition video analytics, pattern-based 
+                analytics algorithms and teach by example capabilities, 
+                Avigilon is leading the industry in providing preventative 
+                protection through superior self-learning video analytics technology.
+            </p>
+            <ul>
+                <li><p>plan your exhibit layouts</p></li>
+                <li><p>optimize your staffing levels</p></li>
+                <li><p>address queue management, and</p></li>
+                <li><p>create promotions unique to your visitor base.</p></li>
+            </ul>
+            <p>It will also enable you to identify funding needs more accurately based on visitorship, seasonal peaks, staffing requirements and reports for popular exhibits.</p>
+        </div>
+    </div>
+        
+    <div class="row">
+        <h2> Infrared Cameras</h2>
+        <div class="left">
+            <p>The highest performance members of our successful ‘Gazelle’ 
+                range of instruments, Gazelle DualView offers tried and tested 
+                infrared people technology for a range of applications, with 
+                built-in optical camera for validation and audit purposes. Where 
+                privacy is an additional concern, a thermal only version of 
+                Gazelle is also available, where individuals cannot be identified. 
+                You can also monitor your sensors remotely using our software and 
+                perform any checks you need to.</p>
+        </div>
+        <div class="right">
+            <div class="shrink">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/infrared.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

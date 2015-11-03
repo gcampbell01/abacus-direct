@@ -164,3 +164,25 @@ float: left;
     width: 590px;
     margin: 0px auto;
 }
+
+.container h1 {
+    text-align: center;
+}
+
+.container .left {
+    float: left;
+    width: 50%;
+}
+
+.container .left p {
+    margin: 20px;
+}
+
+.container .right {
+    width: 50%;
+    float: right;
+}
+
+.container iframe {
+    margin: 20px;
+}

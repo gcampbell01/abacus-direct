@@ -9,10 +9,15 @@
 
 
 {% block main %}
+<div class="topper">
+    <img src="{{ MEDIA_URL }}radpress/entry_images/security.png">
+</div>
+<div class="breakline"></div>
 
 <div class="container">
     <div class="row">
         <div class="top">
+            <h1> Features</h1>
             <p> 
                 With Abacus, you get what you need, when you need it, 
                 which allows you to take our insights and turn them into 
@@ -22,32 +27,28 @@
     </div>
     <div class="row">
         <div class="left">
-            <h1>User Management</h1>
+            <h1>Live Alerts</h1>
             <ul>
-                <li><p>Create new accounts for your staff, and assign them user 
-                    levels based on their authority.</p></li>
-                <li><p>Multiple user hierarchy and access security.</p></li>
-                <li><p>Assign tasks by user level, and delegate the work load 
-                    from the top down.</p></li>
+                <li><p>Be notified of any major events as soon as they happen. </p></li>
+                <li><p>Choose what events you'd like to know about.</p></li>
+                <li><p>Have the knowledge to make informed decisions about your business</p></li>
+                <a href="{% url 'radpress-alerts' %}">
+                    <div class="link">
+                        Available alerts &rsaquo;&rsaquo;
+                    </div>
+                </a>
             </ul>
-            <a href="{% url 'radpress-users' %}">
-                <div class="link">
-                    User assignment &rsaquo;&rsaquo;
-                </div>
-            </a>
         </div>
         <div class="right">
             <div class="shrink">
-                <img src="{{ MEDIA_URL }}radpress/entry_images/people.png">
+                <img src="{{ MEDIA_URL }}radpress/entry_images/facebook.gif">
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="left">
-            <div class="shrink">
-                <img src="{{ MEDIA_URL }}radpress/entry_images/desk.png">
-            </div>
+            <img src="{{ MEDIA_URL }}radpress/entry_images/ESOC_main_control_room_large.jpg">            
         </div>
         <div class="right">
             <h1>Live Monitoring</h1>
@@ -55,12 +56,12 @@
                 <li><p>Keep up to date by watching live data as it happens.</p></li>
                 <li><p>View camera feeds to keep an eye on your premises.</p></li>
                 <li><p>Create custom dashboard parameters to view.</p></li>
+                <a href="{% url 'radpress-live' %}">
+                    <div class="link">
+                        Dashboard functions &rsaquo;&rsaquo;
+                    </div>
+                </a>
             </ul>
-            <a href="{% url 'radpress-live' %}">
-                <div class="link">
-                    Dashboard functions &rsaquo;&rsaquo;
-                </div>
-            </a>
         </div>
     </div>
 
@@ -107,22 +108,25 @@
         </div>
     </div>
 
+
     <div class="row">
         <div class="left">
-            <h1>Live Alerts</h1>
+            <h1>User Management</h1>
             <ul>
-                <li><p>Be notified of any major events as soon as the happen. </p></li>
-                <li><p>Choose what events you'd like to know about.</p></li>
-            <a href="{% url 'radpress-alerts' %}">
+                <li><p>Create new accounts for your staff, and assign them user 
+                    levels based on their authority.</p></li>
+                <li><p>Multiple user hierarchy and access security.</p></li>
+                <li><p>Assign tasks by user level, and delegate the work load 
+                    from the top down.</p></li>
+            </ul>
+            <a href="{% url 'radpress-users' %}">
                 <div class="link">
-                    Available alerts &rsaquo;&rsaquo;
+                    User assignment &rsaquo;&rsaquo;
                 </div>
             </a>
         </div>
         <div class="right">
-            <div class="shrink">
-                <img src="{{ MEDIA_URL }}radpress/entry_images/bell.png">
-            </div>
+            <img src="{{ MEDIA_URL }}radpress/entry_images/team.jpg">
         </div>
     </div>
 </div>
